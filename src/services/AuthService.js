@@ -9,6 +9,11 @@ export default {
             .post(url + '/api/auth/login', credentials)
             .then(response => response.data);
     },
+    async register(credentials) {
+        return axios
+            .post(url + '/api/auth/register', credentials)
+            .then(response => response.data);
+    },
     async fetchToken() {
         return axios
             .post(url + 'auth/me')
