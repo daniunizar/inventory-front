@@ -4,9 +4,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
 <div class="flex flex-col min-h-screen">
-  <header class="bg-gray-800 p-4">
-    <h1 class="text-white text-2xl font-medium">Inventory</h1>
-  </header>
+  <Header></Header>
   <main class="flex-1 p-4">
     <h2 class="text-2xl font-medium mb-2">Escoge tu inventario</h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -42,17 +40,18 @@ import TheWelcome from '../components/TheWelcome.vue'
   </div>
 </div>
   </main>
-  <footer class="bg-gray-800 p-4 text-white text-center">
-    Un proyecto de Stukita
-  </footer>
+  <Footer></Footer>
 </div>
 
 </template>
 
 <script>
 import { useSessionStore } from "@/stores/session-store";
+import Header from '../components/partials/Header.vue';
+import Footer from '../components/partials/Footer.vue';
 
 export default {
+  components: { Header, Footer },
   setup() {
     const sessionStore = useSessionStore();
       return {
