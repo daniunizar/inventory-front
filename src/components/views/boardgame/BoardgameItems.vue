@@ -1,8 +1,22 @@
 <template>
 <div class="flex flex-col min-h-screen">
   <Header></Header>
-  <main class="flex-1 p-4">
-    <h2 class="text-2xl font-medium mb-2">En construcción</h2>
+  <main class="container mx-auto">
+    <h2 class="text-2xl font-medium mb-2">Juegos de Mesa</h2>
+    <table class="table">
+        <tr>
+          <td>Nombre</td>
+          <td>Editorial</td>
+          <td>Mínimo de jugadores</td>
+          <td>Máximo de jugadores</td>
+        </tr>
+        <tr>
+          <th>Arkham Horror</th>
+          <th>Flying Games</th>
+          <th>1</th>
+          <th>8</th>
+        </tr>
+    </table>
     <button @click="goto('home')" class="bg-blue-500 border hover:bg-blue-300 text-white mt-2 p-2">Volver</button>
   </main>
   <Footer></Footer>
